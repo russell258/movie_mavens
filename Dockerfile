@@ -8,6 +8,7 @@ COPY movie_mavens_client/package-lock.json .
 COPY movie_mavens_client/tsconfig.app.json .
 COPY movie_mavens_client/tsconfig.spec.json .
 COPY movie_mavens_client/tsconfig.json .
+COPY movie_mavens_client/ngsw-config.json .
 COPY movie_mavens_client/src src
 
 RUN npm i -g @angular/cli
