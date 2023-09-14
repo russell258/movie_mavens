@@ -1,0 +1,16 @@
+.about-us{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+}
+
+p{
+  text-align:center;
+}
+
+.container{
+  margin-left:auto;
+  margin-right:auto;
+
+}
+

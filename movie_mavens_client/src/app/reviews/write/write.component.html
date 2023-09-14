@@ -1,0 +1,43 @@
+<hr>
+<div class="container" style="margin-right:auto; margin-left:auto;">
+  <h1 style="text-align:center">Write a Review!</h1>
+</div>
+<hr>
+
+<div style="border:2px groove blue; border-radius:10px; display:flex;background-color:ivory; margin-left:auto;margin-right:auto;">
+  <form enctype="multipart/form-data" [formGroup]="reviewForm" (ngSubmit)="reviewSubmit()">
+    <div>
+      <h2>Movie Title: </h2>
+      <div><h3>{{movie.title}}</h3></div>
+      <p>Released on {{movie.release_date}}</p>
+      <input type="hidden" formControlName="movieId">
+      <input type="hidden" formControlName="title">
+      <input type="hidden" formControlName="releaseDate">
+    </div>
+    <div>
+      <h4>Synopsis</h4>
+      <div><p>{{movie.overview}}</p></div>
+      <input type="hidden" formControlName="overview">
+    </div>
+    <div>
+      <h4>Average Rating: </h4>
+      <div><p>{{movie.vote_average}}</p></div>
+      <input type="hidden" formControlName="average_rating">
+    </div>
+    <hr>
+    <div>
+      <h3>Rating: </h3>
+      <input type="number" id="rating" formControlName="rating" placeholder="Rate from 1 to 10" step="1" >
+    </div>
+    <div>
+      <h3 style="padding-top:15px;">Review: </h3>
+      <input type="text" formControlName="review" placeholder="Write your review here!" style="height:50px; width:350px">
+    </div>
+    <div>
+      <h3 style="padding-top:15px;">Upload a memory: </h3>
+      <input type="file" formControlName="photo" #imageInput>
+    </div>
+    <button type="submit" [disabled]="!reviewForm.valid">Add Review</button>
+  </form>
+</div>
+

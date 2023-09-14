@@ -1,0 +1,32 @@
+<h1>Get started with Movie Mavens today!</h1>
+
+<form [formGroup]="regForm" (ngSubmit)="performReg()">
+  <table>
+    <tr>
+      <td>Email</td>
+      <td>
+        <input type="email" size="30" formControlName="email">
+      </td>
+    </tr>
+    <tr>
+      <td>Username:</td>
+      <td>
+        <input type="username" size="30" formControlName="username">
+      </td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td>
+        <input type="text" size="30" formControlName="password">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit" [disabled]="regForm.invalid">
+          Register
+        </button>
+      </td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,12 @@
+.welcome{
+  background-color:rgb(233, 201, 179);
+  display:flex;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.container{
+  margin-left:auto;
+  margin-right:auto;
+  background-image:  url(https://img.freepik.com/free-vector/blank-floral-background_53876-112693.jpg?w=2000);
+}

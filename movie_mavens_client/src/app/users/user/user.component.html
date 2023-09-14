@@ -1,0 +1,28 @@
+<hr>
+<div class="container" style="margin-right:auto; margin-left:auto;">
+  <h1 style="text-align:center">My Profile</h1>
+  <h2 style="text-align:center">Number of Reviews made: {{userReviews.length}}</h2>
+</div>
+<hr>
+
+
+  <mat-card class="review-card" *ngFor = "let u of userReviews">
+    <mat-card-header>
+      <h2>{{u.title}}</h2>
+      <img *ngIf="+u.rating>5" mat-card-avatar src="/assets/smile.png">
+      <img *ngIf="+u.rating<6" mat-card-avatar src="/assets/notsmile.png">
+    </mat-card-header>
+    <img mat-card-image class="center" src = "{{u.image_url}}" width="400" height="auto" onerror="this.style.display='none'" alt="/assets/noimage.png">
+    <mat-card-content class="content">
+      <p>Rating: {{u.rating}}</p>
+      <p>Review: {{u.review}}</p>
+    </mat-card-content>
+    <mat-card-footer class="footer-center">
+      Posted on {{u.posted_on | date:'longDate'}}
+    </mat-card-footer>
+   <mat-card-actions class="trashcan">
+    <button mat-fab matTooltip="Delete this review" *ngIf="u.user_id ==this.user_id" (click)="deleteReview(u.review_id, u.title)"><mat-icon>delete</mat-icon></button>
+   </mat-card-actions>
+
+  </mat-card>
+

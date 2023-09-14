@@ -1,0 +1,43 @@
+.movie-card{
+  width: 500px;
+  height: auto;
+  border: 2px groove blue;
+  border-radius: 10px;
+  display:flex;
+  background-color: honeydew;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:2px;
+  margin-bottom:5px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button-center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.footer-center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.content{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:justify;
+}

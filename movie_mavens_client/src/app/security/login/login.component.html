@@ -1,0 +1,36 @@
+
+
+
+<body class ="container">
+  <mat-card class="welcome">
+    <mat-card-content class="welcome">
+      <h1>Welcome to Movie Mavens</h1>
+    </mat-card-content>
+    <mat-card-footer class="welcome">
+      <p>Share and read movie reviews</p>
+    </mat-card-footer>
+  </mat-card>
+
+  <h2>Sign in to your account</h2>
+<form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+  <table>
+    <tr>
+      <td>Username: </td>
+      <input type="text" size="30" formControlName="username">
+    </tr>
+    <tr>
+      <td>Password: </td>
+      <input type="text" size="30" formControlName="password">
+    </tr>
+  </table>
+  <button color="accent" type="submit" [disabled]="loginForm.invalid">Log in</button>
+</form>
+<p>New user?</p> <a [routerLink]="['/register']">Create an account</a>
+
+
+<h1>Get started with Movie Mavens today!</h1>
+</body>
+
+
+
+

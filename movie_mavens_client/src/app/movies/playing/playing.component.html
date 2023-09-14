@@ -1,0 +1,32 @@
+<hr>
+<div class="list">
+  <h2>Page: {{pageNo}}</h2>
+  <button class="prev-button" *ngIf="pageNo > 1" mat-raised-button color="primary" (click)="previousPage()">
+      Previous Page
+  </button>&nbsp;
+  <button  class="page-button" mat-raised-button color="primary" (click)="nextPage()">
+      Next Page
+  </button>
+  <h2>Playing Now</h2>
+</div>
+<hr>
+<mat-card class="movie-card" *ngFor="let m of playingList?.results; let i = index">
+  <mat-card-header>
+    <h2>{{m.title}}</h2>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{m.overview}}
+  </mat-card-content>
+  <img mat-card-image class="center" src="{{m?.backdrop_path}}" width="400" height="auto" onerror="this.style.display='none'">
+  <mat-card-footer class="footer-center">
+    Rating: {{m.vote_average | number: '1.1-2'}}, Language: {{m.original_language}}
+  </mat-card-footer>
+  <mat-card-actions>
+    <button class="button-center" color="accent" (click) = "writeReview(m)" [routerLink]="['/write', m.id]">Write a Review for {{m.title}}</button>
+  </mat-card-actions>
+</mat-card>
+
+
+
+
+

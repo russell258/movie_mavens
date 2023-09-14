@@ -1,0 +1,49 @@
+<hr>
+<div style="margin-right:auto; margin-left:auto;">
+  <h1 style="text-align:center">Get in touch with us</h1>
+</div>
+<hr>
+
+<div class="container" style="display:inline-flex">
+  <div>
+    <img src="/assets/contact.png" width="500" height="auto" alt="https://s.yimg.com/ny/api/res/1.2/DVO3TyYh.v3hj3NhyzvbaA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ3OA--/https://media.zenfs.com/en-SG/homerun/vulcanpost.com/386fcd7f55e166ecee50875b54a3dd19">
+  </div>
+ <div class ="contact">
+  <h2>
+    Contact:
+  </h2>
+  <p>
+    moviemvn@gmail.com
+  </p>
+  <h2>
+    Based in:
+  </h2>
+  <p>
+    NUS ISS, Singapore
+  </p>
+ </div>
+
+</div>
+
+
+<div class="container" style="border:ridge">
+  <form [formGroup]="contactForm" (ngSubmit)="contactSubmit()">
+    <div style="padding-bottom:10px">
+      <h3>Full Name</h3>
+      <input type="text" formControlName="fullName">
+    </div>
+    <div style="padding-bottom:10px">
+      <h3>Email</h3>
+      <input type="text" formControlName="email">
+    </div>
+    <div style="padding-bottom:10px">
+      <h3>Message</h3>
+      <input style="height:50px; width:350px;" type="text" formControlName="message" placeholder="Have enquiries? Reach out to us!">
+    </div>
+    <button type="submit" [disabled]="!contactForm.valid">Contact Us</button>
+  </form>
+</div>
+
+<br>
+<h2>This project was conceived in NUS ISS: </h2>
+<div #map style="width:30%;height:300px"></div>
